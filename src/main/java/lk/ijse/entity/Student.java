@@ -6,11 +6,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lk.ijse.embed.FullName;
 
-@Entity
+@Entity // This annotation is used to specify that the class is an entity
 @Table(name = "Student")
 public class Student {
-    @Id
-    @Column(name = "id")
+    @Id // This annotation is used to specify the primary key of the entity
+    @Column(name = "id") // This annotation is used to specify the column name
     private String id;
     @Column(name = "name")
     private FullName name;

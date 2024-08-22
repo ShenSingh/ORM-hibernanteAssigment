@@ -9,8 +9,8 @@ public class FactoryConfiguration {
     private static FactoryConfiguration factoryConfiguration;
     private SessionFactory sessionFactory;
     private FactoryConfiguration(){
-        Configuration configuration = new Configuration().configure().addAnnotatedClass(Student.class);
-        sessionFactory = configuration.configure().buildSessionFactory();
+        Configuration configuration = new Configuration().configure().addAnnotatedClass(Student.class); // add the entity class
+        sessionFactory = configuration.configure().buildSessionFactory(); // build the session factory
     }
 
     public static FactoryConfiguration getInstance(){
@@ -19,6 +19,6 @@ public class FactoryConfiguration {
     }
 
     public Session getSession(){
-        return sessionFactory.openSession();
+        return sessionFactory.openSession(); // open a session
     }
 }

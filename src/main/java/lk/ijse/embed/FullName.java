@@ -2,7 +2,7 @@ package lk.ijse.embed;
 
 import jakarta.persistence.Embeddable;
 
-@Embeddable
+@Embeddable // This annotation is used to specify that the class is an embed
 public class FullName {
     private String firstName;
     private String lastName;
